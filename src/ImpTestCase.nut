@@ -116,7 +116,7 @@ local ImpTestCase = class {
    */
   function assertClose(expected, actual, maxDiff, message = "Expected value: %s±%s, got: %s") {
     this.assertions++;
-    if (math.abs(expected - actual) > maxDiff) {
+    if (math.fabs(expected - actual) > maxDiff) {
       throw format(message, expected + "", maxDiff + "", actual + "");
     }
   }
